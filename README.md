@@ -1,27 +1,28 @@
+# Exploratory analysis of Atlantic hurricanes
+
+### Background
+Hurdat2 is a database of hurricanes and similar storms produced by the US National Oceanic and Atmospheric
+Administration (NOAA). It contains data on
+• the track each storm followed (latitude-longitude coordinates)
+• the wind speed in knots (1 knot = 0.52 m/s) and the classification of the storm at each point along its track.
+• the point at which each storm crossed onto land if it did cross onto land (“landfall”)
+and a number of other variables, all organised by a unique ID code for each storm and sometimes a name. Databases 
+like this are crucial for understanding how climate change has affected patterns of extreme weather and predicting 
+how the choices we make about carbon emissions shape extreme weather in the future.
+The original database is stored in a somewhat awkward format, but I have tidied it and you will find the full dataset 
+for the Atlantic Ocean region in the dataframe hurrs inside the file Hurdata_tidy.RData.
+The documentation from NOAA is at https://www.nhc.noaa.gov/data/hurdat/hurdat2-format-nov2019.pdf 
+Background information on the Hurdat2 project and hurricane science in general are at https://www.noaa. 
+gov/education/resource-collections/weather-atmosphere/hurricanes https://www.aoml.noaa.gov/hrd/hurdat/ 
+Data_Storm.html
+I have removed some variables and simplified the classification system. The data set can be found in 
+“/processed_data” we will use the word “storm” to mean “anything with a unique ID in the database” and the column 
+is Hurricane is TRUE/FALSE depending on whether the storm system had reached hurricane status (based on wind 
+speed) at a given point in time.
+    
+    
     #calling required libraries
     library(tidyverse)
-
-    ## ── Attaching packages ──────────────────────────────────────────────────────── tidyverse 1.3.2 ──
-    ## ✔ ggplot2 3.3.6     ✔ purrr   0.3.4
-    ## ✔ tibble  3.1.7     ✔ dplyr   1.0.9
-    ## ✔ tidyr   1.2.0     ✔ stringr 1.4.0
-    ## ✔ readr   2.1.2     ✔ forcats 0.5.1
-    ## ── Conflicts ─────────────────────────────────────────────────────────── tidyverse_conflicts() ──
-    ## ✖ dplyr::filter() masks stats::filter()
-    ## ✖ dplyr::lag()    masks stats::lag()
-
-    library(maps)
-
-    ## 
-    ## Attaching package: 'maps'
-    ## 
-    ## The following object is masked from 'package:purrr':
-    ## 
-    ##     map
-
-    #Loading hurricane data
-    # Load the data file using a relative path
-    load("./processed_data/Hurdat2_tidy.RData")
 
 ## Question 1 : What’s in this dataset?
 
