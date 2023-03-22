@@ -52,11 +52,12 @@ speed) at a given point in time.
       
       track_points <- setNames(as.numeric(track_points$total_track_pt),as.character(track_points$name))
       list("Total no. of Storms"=total_storms,"Range of years covered"=range,"Track Points of each storm"=track_points)
-    }
+      }
 
-\*Test your function by running it for three cases: • the full hurrs
-dataframe • a version that has been filtered to contain only storms from
-a single year • the one-hurricane dataframe you made in (a)
+\*Test your function by running it for three cases: 
+- the full hurrs dataframe 
+- a version that has been filtered to contain only storms from
+- a single year • the one-hurricane dataframe you made in (a)
 
 -   Test 1
 
