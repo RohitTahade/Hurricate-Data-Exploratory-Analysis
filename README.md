@@ -39,7 +39,7 @@ speed) at a given point in time.
 - the range of years covered 
 - a vector containing the number of track points for each storm
 
-    Hurdat2_summary <- function(df){
+      Hurdat2_summary <- function(df){
       #count the total number of storms
       total_storms<- summarise(df,count=n())
       
