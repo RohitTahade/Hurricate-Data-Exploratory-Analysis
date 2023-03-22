@@ -35,8 +35,9 @@ speed) at a given point in time.
 
 #### b. Write a function called Hurdat2\_summary that takes the hurrs dataframe as an input and returns a named list containing
 
-• the total number of storms • the range of years covered • a vector
-containing the number of track points for each storm
+- the total number of storms 
+- the range of years covered 
+- a vector containing the number of track points for each storm
 
     Hurdat2_summary <- function(df){
       #count the total number of storms
