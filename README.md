@@ -212,7 +212,7 @@ a single year • the one-hurricane dataframe you made in (a)
 
     ## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-7-1.png)
+![](figures/unnamed-chunk-7-1.png)
 
 #### d. What year did they begin naming hurricanes and other storms?
 
@@ -258,7 +258,7 @@ a single year • the one-hurricane dataframe you made in (a)
       #Giving sequential coloring to observations as per wind speed. sequence followed: Yellow to Red
       scale_color_distiller(type="seq",direction=1,palette="YlOrRd")
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-9-1.png)
+![](figures/unnamed-chunk-9-1.png)
 
 #### b. write a function that takes a year as input and makes a similar plot for only the hurricanes during that year. The function doesn’t need to return a value, but it does need to generate a plot. Test your function by making the plot for a year of your choice.
 
@@ -280,7 +280,7 @@ plotting hurricanes in year 1990
 
     hurricane_in_year(1990)
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-11-1.png)
+![](figures/unnamed-chunk-11-1.png)
 
 # Question 3: The local perspective
 
@@ -415,7 +415,7 @@ Plotting on map hurricanes within 100km radius of New York
       # Green dot showing location of city  
       geom_point(data= filter(cities,name=="New York"),aes(x=long,y=lat),color="green",size=2)
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-21-1.png)
+![](figures/unnamed-chunk-21-1.png)
 
 # Question 4: Climate change
 
@@ -448,7 +448,7 @@ Plotting all Hurricane-strength storms count over the years
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-22-1.png)
+![](figures/unnamed-chunk-22-1.png)
 
 ***The plot shows that, the number of hurricane strength storms is
 increasing***
@@ -462,7 +462,7 @@ plotting count of Hurricane, not Hurricane and All storms counts
 
     ## `geom_smooth()` using formula 'y ~ x'
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-23-1.png)
+![](figures/unnamed-chunk-23-1.png)
 
 ***From the plot it is observed that, total number of storms is
 continuously increasing over the years along with non-hurricane storms.
@@ -500,7 +500,7 @@ landfalls from 1851 till year 1920,1950,1990,2020 on world map
               labels = c("A", "B", "C","D"),
               ncol = 2, nrow = 2)
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-25-1.png)
+![](figures/unnamed-chunk-25-1.png)
 
 **It is seen in the graph that over the years,storms making landfall are
 expanding across eastern coastal regions of USA towards Mexico. Number
@@ -524,7 +524,7 @@ Plotting Maximum wind speed over the years
 
     ## `geom_smooth()` using method = 'loess' and formula 'y ~ x'
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-26-1.png)
+![](figures/unnamed-chunk-26-1.png)
 
 ***The plot shows that maximum wind speed of Hurricanes each year is
 increasing over the years***
@@ -535,7 +535,7 @@ Seasonal Timings of Hurricanes
 
     hurrs %>% group_by(month) %>% ggplot(aes(x=month)) + scale_x_discrete(limits=1:12) + geom_histogram(binwidth = 1,color="yellow",fill="blue") +theme_minimal() +labs(title = "No. of storms in each Month ")
 
-![](Rcode_files/figure-markdown_strict/unnamed-chunk-27-1.png)
+![](figures/unnamed-chunk-27-1.png)
 
 ***This plot shows that 8th, 9th,10th month of the year is seasonal
 timing of Hurricanes***
